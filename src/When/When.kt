@@ -1,5 +1,7 @@
 package When
-
+/*
+else:单独存在
+ */
 fun main(args : Array<String>) {
     var x = 101
     val greater = { x : Int -> x > 100 }

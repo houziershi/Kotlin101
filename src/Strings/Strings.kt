@@ -11,11 +11,17 @@ fun main(args : Array<String>) {
     println("""My favorite quote is by '$plato1' although at ${plato1.length} characters long, it is not compact.
 He is also a skeptic on love "${platoOnLove()}. He is wrong, love is as simple as 1 + 1 = ${1 + 1 }."
             """)
+
+    println("'${myString()}'")
 }
 
 fun platoOnLove() : String {
     return "Love is a serious mental disease."
 }
-
+fun myString():String {
+    return """my name is houguokun
+        |后缀
+    """
+}
 
 /* what's next? try Variables\Variables.kt to learn about immutable/mutable variable declarations */
