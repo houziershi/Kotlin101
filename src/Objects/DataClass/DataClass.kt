@@ -3,6 +3,7 @@ package Objects.DataClass
 /* This sample demonstrates various features that you get from using a data class */
 
 public data class Superhero(val firstName : String, val lastName : String)
+data class User(var userName:String, var userNo:Int)
 
 fun main(args : Array<String>) {
     var superman = Superhero("clark", "kent")
@@ -40,4 +41,8 @@ fun main(args : Array<String>) {
 
     val(firstName2, lastName2) = supercharge(superman)
     println("Our supercharged superhero name is $firstName2 $lastName2")
+
+    var user = User("guokun",101)
+    println(user.toString())
+
 }
