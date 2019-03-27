@@ -23,6 +23,11 @@ public fun main(args : Array<String>) {
     }
 
     typeC.show()
+
+    var typeD = dynamicMethod("guokun"){
+        myMethod()
+    }
+    typeD.show()
 }
 
 fun configurator(config : Roboto.() -> Unit) : Roboto {
@@ -36,6 +41,13 @@ fun configurator(name : String, config : Roboto.() -> Unit) : Roboto {
     r.giveName(name)
     r.config()
     return r
+}
+
+fun dynamicMethod(name: String, method: Roboto.()->String) : Roboto {
+    var roboto = Roboto()
+    roboto.giveName(name)
+    roboto.method()
+    return roboto
 }
 
 public class Roboto {
@@ -63,5 +75,10 @@ public class Roboto {
             println ("$name can $capabilities")
         else
             println (capabilities)
+    }
+
+    fun myMethod():String {
+        println("guokun study-------")
+        return "hgk"
     }
 }

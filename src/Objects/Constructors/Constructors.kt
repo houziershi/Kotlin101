@@ -21,4 +21,19 @@ fun main(args : Array<String>) {
 
     var n = Primary("Bon Jovi")
     n.sayName()
+
+    var my=MyPrimary("guokun", 21)
+    my.myInfo()
+}
+
+class MyPrimary(myName:String, myAge: Int = 20) {
+    var name = myName
+    var age = myAge+1
+    init {
+        age += 1
+    }
+
+    fun myInfo() {
+        println("My name is $name and I am $age years old.")
+    }
 }

@@ -1,5 +1,7 @@
 package Objects.CopyDataClass
-
+/*
+data class copy
+ */
 data class Person(val firstName: String, val lastName: String){
     public fun print(){
         println("$firstName $lastName")

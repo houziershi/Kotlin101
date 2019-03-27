@@ -1,6 +1,6 @@
 package Ranges
 /*
-for,in关键字,ok
+for,in关键字
  */
 fun main(args : Array<String>) {
     for (i in 1..10)

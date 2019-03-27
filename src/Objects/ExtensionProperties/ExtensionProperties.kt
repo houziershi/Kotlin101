@@ -1,5 +1,7 @@
 package Objects.ExtensionProperties
-
+/*
+类的属性扩展
+ */
 val Amazing.isEmpty : Boolean
     get() = this.name.length == 0
 
