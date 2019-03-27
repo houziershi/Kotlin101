@@ -16,7 +16,21 @@ data class Customer(val name: String, val email: String)
     ```
     fun foo(bar: Int = 0, baz: Int) { …… }
     foo(baz = 1) // 使用默认值 bar = 0
+    ``` 
+ - 使用区间
     ```
+    for (i in 1..100) { …… }  // 闭区间：包含 100
+    for (i in 1 until 100) { …… } // 半开区间：不包含 100
+    for (x in 2..10 step 2) { …… }
+    for (x in 10 downTo 1) { …… }
+    if (x in 1..10) { …… }
+    ```   
+- 延迟属性
+    ```
+    val p: String by lazy {
+        // 计算该字符串
+    }
+    ```    
 - 扩展：扩展函数和扩展属性
     * 扩展是静态解析的：通过定义一个扩展，你并没有在一个类中插入新成员， 仅仅是可以通过该类型的变量用点表达式去调用这个新函数。
 - When用途：case语句
