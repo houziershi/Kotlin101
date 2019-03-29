@@ -5,11 +5,11 @@ All the code here compiles under Kotlin Plugin 1.0.0.
 
 I find it useful when I forgot certain Kotlin construct. Instead of looking up on the documentation, I just quickly checked the snippets in Kotlin101.
 
-###### Kotlin知识点
+###### Kotlin知识点，只为教自己
 
 - data class：创建 DTOs（POJOs/POCOs）
 ```
-data class Customer(val name: String, val email: String)
+data class User(var userName:String, var userNo:Int)
 ```
 - 函数:fun
     * 如果一个默认参数在一个无默认值的参数之前，那么该默认值只能通过使用命名参数调用该函数来使用：

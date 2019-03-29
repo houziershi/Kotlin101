@@ -13,4 +13,14 @@ fun main(args : Array<String>) {
         x == 50 -> print("Exact match")
         else -> print("Outside range")
     }
+
+    println()
+    var arg:Int
+    arg = 10
+
+    when{
+        arg == 10 -> print("10")
+        arg == 11 -> print("11")
+        else -> print("case else")
+    }
 }
