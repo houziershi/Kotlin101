@@ -15,6 +15,23 @@ class Primary(initialName : String, age : Int = 30) {
     }
 }
 
+class InitOrder(initOne : String = "hgk", initTwo: Int = 20 ) {
+    var initOneParameter = initOne
+    var initTwoParameter = initTwo
+
+
+    init {
+        initOneParameter += "hgc"
+    }
+    init {
+        initTwoParameter += 10
+    }
+
+    fun sayInfo() {
+        println("My name is $initOneParameter and I am $initTwoParameter years old.")
+    }
+}
+
 fun main(args : Array<String>) {
     var p = Primary("John Adams", 56)
     p.sayName()
@@ -24,6 +41,9 @@ fun main(args : Array<String>) {
 
     var my=MyPrimary("guokun", 21)
     my.myInfo()
+
+    var myInfo = InitOrder()
+    myInfo.sayInfo()
 }
 
 class MyPrimary(myName:String, myAge: Int = 20) {

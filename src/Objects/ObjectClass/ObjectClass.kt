@@ -1,6 +1,26 @@
 package Objects.ObjectClass
 
-fun main(args : Array<String>) {
+class StaticDemo {
+    companion object {
+        val constantOne = 1
+    }
+}
+
+class StaticDemoTwo {
+    companion object InnerStatic {
+        val constantTwo = 2
+    }
+}
+
+class StaticDemoThree {
+    companion object {
+        const val constantThree = 3
+    }
+}
+
+
+
+fun main(args: Array<String>) {
 
     val espana = Matador("Emilio")
 
@@ -13,19 +33,24 @@ fun main(args : Array<String>) {
 
 
     //how do you pass it to a parameter
+
+    //guokun
+    println(StaticDemo.constantOne)
+    println(StaticDemoTwo.constantTwo)
+    println(StaticDemoThree.constantThree)
 }
 
-class Matador(name : String) {
-    private val name : String = name
+class Matador(name: String) {
+    private val name: String = name
 
     private fun myPrivateShow() {
         println("This is ${name} private show")
     }
 
     companion object {
-        fun show(mt : Matador) {
+        fun show(mt: Matador) {
             //function inside a class object can access private properties and function of the class
-            println ("Expose the private secret of ${mt.name}")
+            println("Expose the private secret of ${mt.name}")
             mt.myPrivateShow()
         }
     }

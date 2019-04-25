@@ -23,4 +23,14 @@ fun main(args : Array<String>) {
         arg == 11 -> print("11")
         else -> print("case else")
     }
+
+    println(hasPrefix("prefix idea"))
+    println(hasPrefix(15))
+
 }
+
+fun hasPrefix(x:Any) = when(x) {
+    is String -> x.startsWith("prefix")
+    else -> false
+}
+
