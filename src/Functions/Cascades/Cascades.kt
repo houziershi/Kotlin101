@@ -12,6 +12,12 @@ fun main(Args : Array<String>) {
     }
 }
 
+fun <T> MutableList<T>.swap(index1: Int, index2: Int) {
+    val tmp = this[index1] // “this”对应该列表
+    this[index1] = this[index2]
+    this[index2] = tmp
+}
+
 public infix fun <T> T.with(operations : T.() -> Unit) : T {
     operations()
     return this

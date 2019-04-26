@@ -15,10 +15,11 @@ fun main(args: Array<String>) {
 
 class FinalConstruct(var name: String) {
     var one: Int = 1
+    lateinit var lazyOne:String
 }
 
 open class FlexibleConstruct(var name: String) {
-    var two: Int = 2
+    open var two: Int = 2
     open fun method() {
 
     }
@@ -38,7 +39,9 @@ interface Dancing {
 
 //You can only have one supertype but multiple interfaces
 class LessFlexible(name: String) : FlexibleConstruct(name), Singing, Dancing {
-
+    override var two: Int
+        get() = 4
+        set(value) {}
 
     override fun sing() {
         super.sing()
@@ -52,7 +55,6 @@ class LessFlexible(name: String) : FlexibleConstruct(name), Singing, Dancing {
 
     override fun method() {
         super.method()
-
         println(two)
         println("LessFlexible")
     }
