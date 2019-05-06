@@ -36,4 +36,3 @@ data class User(var userName:String, var userNo:Int)
 - When用途：case语句
 - for,in关键字
 - kotlin Extension语法 infix,inline
-测试git revert1111111
