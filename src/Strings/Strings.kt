@@ -13,6 +13,8 @@ He is also a skeptic on love "${platoOnLove()}. He is wrong, love is as simple a
             """)
 
     println("'${myString()}'")
+
+    myNullString(null)
 }
 
 fun platoOnLove() : String {
@@ -22,6 +24,10 @@ fun myString():String {
     return """my name is houguokun
         |后缀
     """
+}
+fun myNullString(str: String?) {
+    var len = if (str!=null) str.length else -1
+    println(len)
 }
 
 /* what's next? try Variables\Variables.kt to learn about immutable/mutable variable declarations */

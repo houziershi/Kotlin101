@@ -1,6 +1,6 @@
 package Objects.Constructors
 
-class Primary(initialName : String, age : Int = 30) {
+open class Primary(initialName : String, age : Int = 30) {
     var firstName = initialName
     val age = age
 
@@ -33,27 +33,27 @@ class InitOrder(initOne : String = "hgk", initTwo: Int = 20 ) {
 }
 
 fun main(args : Array<String>) {
-    var p = Primary("John Adams", 56)
-    p.sayName()
+//    var p = Primary("John Adams", 56)
+//    p.sayName()
+//
+//    var n = Primary("Bon Jovi")
+//    n.sayName()
+//
+//    var my=MyPrimary("guokun", 21)
+//    my.myInfo()
+//    var myInfo = InitOrder()
+//    myInfo.sayInfo()
 
-    var n = Primary("Bon Jovi")
-    n.sayName()
-
-    var my=MyPrimary("guokun", 21)
-    my.myInfo()
-
-    var myInfo = InitOrder()
-    myInfo.sayInfo()
 }
 
-class MyPrimary(myName:String, myAge: Int = 20) {
-    var name = myName
-    var age = myAge+1
-    init {
-        age += 1
+class MyPrimary(address:String, height: Int = 170, initialName : String, age : Int = 30):Primary(initialName, age)  {
+
+
+    constructor(address:String, height: Int = 170, initialName : String, age : Int = 30, discription: String):this(address, height, initialName, age) {
+
     }
 
     fun myInfo() {
-        println("My name is $name and I am $age years old.")
+
     }
 }
